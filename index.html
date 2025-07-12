@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/img/furgoneta-camper.png" type="image/x-icon">
+  <link rel="stylesheet" href="./static/style.css">
+  <title>Alquiler Furgoneta Camper</title>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="nav-links">
+        <a href="#inicio" data-i18n="nav_inicio">Inicio</a>
+        <a href="#fotos" data-i18n="nav_fotos">Fotos</a>
+        <a href="#descripcion" data-i18n="nav_descripcion">Descripción</a>
+        <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+    </div>
+    <div class="lang-selector">
+        <a href="#" data-lang="es">
+            <img src="img/banderas/españa.png" alt="Español" width="24">
+        </a>
+        |
+        <a href="#" data-lang="en">
+            <img src="img/banderas/inglaterra.png" alt="English" width="24">
+        </a>
+        |
+        <a href="#" data-lang="fr">
+            <img src="img/banderas/francia.png" alt="Français" width="24">
+        </a>
+    </div>
+
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <h1 data-i18n="titulo">¡Alquila nuestra Camper!</h1>
+    <p data-i18n="subtitulo">Explora sin límites desde solo 50€/día</p>
+    <button class="btn" data-i18n="btn_reservar">Reservar ahora</button>
+</section>
+
+<section id="fotos">
+  <h2>Fotos</h2>
+  <div class="gallery">
+    <img src="img/foto1.jpg" alt="Camper 1">
+    <img src="img/foto2.jpg" alt="Camper 2">
+    <img src="img/foto3.jpg" alt="Camper 3">
+    <img src="img/foto4.jpg" alt="Camper 4">
+    <img src="img/foto5.jpg" alt="Camper 5">
+    <img src="img/foto6.jpg" alt="Camper 6">
+    <!-- Añade las que necesites -->
+  </div>
+
+  <!-- Modal para ampliar -->
+  <div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgModal">
+  </div>
+</section>
+
+
+<section id="descripcion">
+  <h2 data-i18n="descripcion_titulo">Descripción y características</h2>
+  <div class="features">
+    <div class="feature-item">
+      <h3 data-i18n="cama_titulo">🛏️ Cama doble</h3>
+      <p data-i18n="cama_texto">Colchón cómodo para 2 personas, sábanas incluidas.</p>
+    </div>
+    <div class="feature-item">
+      <h3 data-i18n="cocina_titulo">🍳 Cocina equipada</h3>
+      <p data-i18n="cocina_texto">Fogón, fregadero, nevera portátil y utensilios.</p>
+    </div>
+    <div class="feature-item">
+      <h3 data-i18n="ducha_titulo">🚿 Ducha portátil</h3>
+      <p data-i18n="ducha_texto">Incluye ducha solar para exteriores.</p>
+    </div>
+    <div class="feature-item">
+      <h3 data-i18n="energia_titulo">🔌 Energía solar</h3>
+      <p data-i18n="energia_texto">Panel solar para recargar móviles y luces LED.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="contacto">
+  <h2 data-i18n="contacto_titulo">Contacto y reservas</h2>
+  <p data-i18n="direccion_texto">📍 Dirección: Sevilla</p>
+  <p data-i18n="telefono_texto">📞 Teléfono: +34 635 48 70 63</p>
+  <p>📧 Email: jcm201080@gmail.com</p>
+  <form>
+    <input type="text" placeholder="Tu nombre" required><br><br>
+    <input type="email" placeholder="Tu correo" required><br><br>
+    <textarea placeholder="Mensaje o consulta..." rows="5"></textarea><br><br>
+    <button class="btn" type="submit" data-i18n="btn_enviar">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Jesús Castaño · Alquiler Camper · Síguenos en Instagram</p>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
