@@ -124,3 +124,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const idiomaGuardado = localStorage.getItem("idioma") || "es";
   cambiarIdioma(idiomaGuardado);
 });
+
+//Agradecimineto despues del formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const message = document.getElementById("successMessage");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        message.style.display = "block";
+        message.scrollIntoView({ behavior: "smooth" });
+
+      } else {
+        alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
+      }
+    });
+  }
+});
